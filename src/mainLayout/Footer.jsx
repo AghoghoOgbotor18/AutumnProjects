@@ -104,7 +104,7 @@ const Footer = () => {
                 <li className="flex items-center gap-3">
                     <FaPhoneAlt className="text-red-500 w-4 h-4 shrink-0" />
                     <a href="tel:+2340000000000" className="text-white/50 text-sm hover:text-red-500 transition-colors duration-300">
-                    +234 000 000 0000
+                    +234 816 897 3060
                     </a>
                 </li>
                 <li className="flex items-center gap-3">
@@ -119,17 +119,10 @@ const Footer = () => {
 
             {/* Bottom bar */}
             <div className="pt-8 border-t border-white/5 flex flex-col md:flex-row items-center justify-between gap-4">
-            <p className="text-white/40 text-xs">
-                &copy; {year} Autumn Projects Nigeria Limited. All rights reserved.
-            </p>
-            <div className="flex items-center gap-6">
-                <a href="/privacy-policy" className="text-white/40 text-xs hover:text-red-500 transition-colors duration-300">
-                Privacy Policy
-                </a>
-                <a href="/terms" className="text-white/40 text-xs hover:text-red-500 transition-colors duration-300">
-                Terms of Service
-                </a>
-            </div>
+                <p className="text-white/40 text-xs">
+                    &copy; {year} Autumn Projects Nigeria Limited. All rights reserved.
+                </p>
+                <p className='text-white/40 text-xs'>Developed by <a href="https://wa.me/2348168973060" target="_blank" className='text-red-500'>Aghogho Ogbotor</a></p>
             </div>
         </div>
         </footer>

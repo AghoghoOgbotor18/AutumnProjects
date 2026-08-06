@@ -57,7 +57,7 @@ const CTA = () => {
 
         <div
             ref={overlayRef}
-            className="fixed inset-0 bg-black/75 pointer-events-none z-[1]"
+            className="fixed inset-0 bg-black/80 pointer-events-none z-[1]"
         />
 
         <div className="relative z-10 text-center px-6 max-w-2xl">
