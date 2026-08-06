@@ -86,7 +86,7 @@ const AboutUs = () => {
                 textInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
             >
-            <span className="text-red-500 text-sm font-semibold tracking-[0.2em] uppercase before:absolute before:w-10 before:bg-red-500 before:-bottom-1 before:h-0.5">
+            <span className="relative text-red-500 text-sm font-semibold tracking-[0.2em] uppercase before:absolute before:w-10 before:bg-red-500 before:-bottom-1 before:h-0.5">
                 Who We Are
             </span>
 
