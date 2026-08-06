@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { FaTimes, FaChevronLeft, FaChevronRight } from 'react-icons/fa'
+import { FaTimes, FaChevronLeft, FaChevronRight, FaArrowDown } from 'react-icons/fa'
 import civilImage from "../../assets/images/civil.jpg"
 import mechanical from "../../assets/images/elect.jpg"
 import procurement from "../../assets/images/procurement.jpg"
@@ -76,42 +76,35 @@ const Projects = () => {
                     <span className="relative text-red-500 text-sm font-semibold tracking-[0.2em] uppercase before:absolute before:w-10 before:bg-red-500 before:-bottom-1 before:h-0.5">
                         Our Work
                     </span>
-                    <div className="flex justify-between items-center">
-                        <h2 className="text-white text-3xl md:text-5xl font-extrabold mt-4 leading-tight">
+                    <h2 className="text-white text-3xl md:text-5xl font-extrabold mt-4 leading-tight">
                         Projects We're <span className="text-red-500">Proud Of</span>
-                        </h2>
-                        <a
-                            href="/projects"
-                            className="inline-flex items-center text-sm text-red-500 gap-1 transition-colors duration-300 w-fit group"
-                        >
-                            View All Projects
-                            <FaChevronRight className='group-hover:pl-1' />
-                        </a>
-                    </div>
+                    </h2>
                     <p className='text-white mt-4 text-sm'>
                         From pipeline integrity work for major oil and gas operators to civil and structural builds for government clients, every project on this page reflects the same standard: delivered on time, within budget, and without compromising on safety.
                     </p>
+                    
                 </div>
 
                 {/* Gallery grid */}
-                <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
-                {projects.map((project, index) => (
-                    <button
-                    key={project.id}
-                    onClick={() => setActiveIndex(index)}
-                    className="group relative h-48 md:h-64 overflow-hidden rounded-md text-left"
-                    >
-                    <img
-                        src={project.image}
-                        alt={project.title}
-                        className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
-                    />
-                    <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors duration-300" />
-                        <span className="absolute bottom-3 left-3 right-3 text-white text-sm md:text-base font-medium opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
-                            {project.title}
-                        </span>
-                    </button>
-                ))}
+                <div className="relative grid grid-cols-2 md:grid-cols-3 gap-4">
+                    <p className='absolute -top-6 text-xs text-white/50 animate-pulse flex items-center gap-1 -mb-5'>click images for better view <FaArrowDown /></p>
+                    {projects.map((project, index) => (
+                        <button
+                        key={project.id}
+                        onClick={() => setActiveIndex(index)}
+                        className="group relative h-48 md:h-64 overflow-hidden rounded-md text-left"
+                        >
+                        <img
+                            src={project.image}
+                            alt={project.title}
+                            className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-black/30 group-hover:bg-black/50 transition-colors duration-300" />
+                            <span className="absolute bottom-3 left-3 right-3 text-white text-sm md:text-base font-medium opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 transition-all duration-300">
+                                {project.title}
+                            </span>
+                        </button>
+                    ))}
                 </div>
 
                 {/* Bottom CTA, centered below the gallery */}
@@ -149,7 +142,7 @@ const Projects = () => {
                 <button
                     onClick={showPrev}
                     aria-label="Previous image"
-                    className="hidden md:flex absolute left-6 top-1/2 -translate-y-1/2 text-white/60 hover:text-red-500 transition-colors duration-200"
+                    className="flex absolute left-6 top-1/2 -translate-y-1/2 text-white/60 hover:text-red-500 transition-colors duration-200"
                 >
                     <FaChevronLeft className="w-8 h-8" />
                 </button>
@@ -173,7 +166,7 @@ const Projects = () => {
                 <button
                     onClick={showNext}
                     aria-label="Next image"
-                    className="hidden md:flex absolute right-6 top-1/2 -translate-y-1/2 text-white/60 hover:text-red-500 transition-colors duration-200"
+                    className="flex absolute right-6 top-1/2 -translate-y-1/2 text-white/60 hover:text-red-500 transition-colors duration-200"
                 >
                     <FaChevronRight className="w-8 h-8" />
                 </button>
