@@ -47,7 +47,7 @@ const Services = () => {
                 <span className="relative text-red-500 text-sm font-semibold tracking-[0.2em] uppercase before:absolute before:w-10 before:bg-red-500 before:-bottom-1 before:h-0.5">
                     What We Do
                 </span>
-                <h2 className="text-[#111315] text-2xl md:text-5xl font-extrabold leading-12 max-w-xl">
+                <h2 className="text-[#111315] text-2xl md:text-5xl font-extrabold max-w-xl">
                     Services Built for <span className="text-red-500">Every Project Stage</span>
                 </h2>
                 <p className='w-full text-sm'>
@@ -62,22 +62,22 @@ const Services = () => {
                 href={`/services/${service.slug}`}
                 className="group block overflow-hidden "
                 >
-                {/* Image */}
-                <div className="relative h-56 overflow-hidden border-b-2 border-b-red-500 rounded-sm">
-                    <img
-                    src={service.image}
-                    alt={service.title}
-                    className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110"
-                    />
-                </div>
+                    {/* Image */}
+                    <div className="relative h-56 overflow-hidden border-b-2 border-b-red-500 rounded-sm">
+                        <img
+                        src={service.image}
+                        alt={service.title}
+                        className="w-full h-full object-cover transition-transform duration-500 ease-out group-hover:scale-110 group-active:scale-110"
+                        />
+                    </div>
 
-                {/* Title + underline */}
-                <div className="py-3">
-                    <h3 className="text-[#111315] text-lg md:text-xl font-semibold mb-3">
-                    {service.title}
-                    </h3>
-                    <span className="block h-[2px] w-10 bg-black/15 group-hover:w-30 group-hover:bg-red-500 transition-all duration-300 ease-out" />
-                </div>
+                    {/* Title + underline */}
+                    <div className="py-3">
+                        <h3 className="text-[#111315] text-lg md:text-xl font-semibold mb-3">
+                            {service.title}
+                        </h3>
+                        <span className="block h-[2px] w-10 bg-black/15 group-active:w-30 group-active:bg-red-500 group-hover:w-30 group-hover:bg-red-500 transition-all duration-300 ease-out" />
+                    </div>
                 </a>
             ))}
             </div>
