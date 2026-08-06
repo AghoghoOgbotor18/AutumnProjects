@@ -3,26 +3,26 @@ import aboutOne from "../../assets/work1.jpg";
 import aboutTwo from "../../assets/work2.jpg";
 
 const useInView = () => {
-  const ref = useRef(null);
-  const [inView, setInView] = useState(false);
+    const ref = useRef(null);
+    const [inView, setInView] = useState(false);
 
-  useEffect(() => {
-    const el = ref.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setInView(true);
-          observer.unobserve(el);
-        }
-      },
-      { threshold: 0.2 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
+    useEffect(() => {
+        const el = ref.current;
+        if (!el) return;
+        const observer = new IntersectionObserver(
+        ([entry]) => {
+            if (entry.isIntersecting) {
+            setInView(true);
+            observer.unobserve(el);
+            }
+        },
+        { threshold: 0.2 }
+        );
+        observer.observe(el);
+        return () => observer.disconnect();
+    }, []);
 
-  return [ref, inView];
+    return [ref, inView];
 };
 
 const AboutUs = () => {
@@ -71,7 +71,7 @@ const AboutUs = () => {
             {/* Award badge, overlapping both images */}
             <div className="absolute bottom-6 left-2 z-30 bg-[#151719] border border-white/10 rounded-md px-5 py-4 shadow-xl max-w-[210px]">
                 <div className="flex items-baseline gap-1">
-                <span className="text-red-500 text-4xl font-extrabold leading-none">6×</span>
+                    <span className="text-red-500 text-4xl font-extrabold leading-none">6×</span>
                 </div>
                 <p className="text-white text-xs mt-2 leading-snug tracking-wide">
                 Shell SPDC Safety Award winner
@@ -86,7 +86,7 @@ const AboutUs = () => {
                 textInView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
             }`}
             >
-            <span className="text-red-500 text-sm font-semibold tracking-[0.2em] uppercase">
+            <span className="text-red-500 text-sm font-semibold tracking-[0.2em] uppercase before:absolute before:w-10 before:bg-red-500 before:-bottom-1 before:h-0.5">
                 Who We Are
             </span>
 

@@ -47,7 +47,7 @@ const Services = () => {
                 <span className="relative text-red-500 text-sm font-semibold tracking-[0.2em] uppercase before:absolute before:w-10 before:bg-red-500 before:-bottom-1 before:h-0.5">
                     What We Do
                 </span>
-                <h2 className="text-[#111315] text-2xl md:text-5xl font-extrabold max-w-xl">
+                <h2 className="text-[#111315] text-3xl md:text-5xl font-extrabold max-w-xl">
                     Services Built for <span className="text-red-500">Every Project Stage</span>
                 </h2>
                 <p className='w-full text-sm'>
