@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import AboutHero from '../components/About/aboutHero'
+import AboutHero from '../components/About/AboutHero'
 import OurStory from '../components/About/OurStory'
 import MissionVision from '../components/About/MissionVision'
 import Values from '../components/About/Values'
