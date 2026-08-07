@@ -19,7 +19,7 @@ const Footer = () => {
             {/* Brand column */}
             <div>
                 <h3 className="text-white text-2xl font-extrabold mb-4">
-                Adland <span className="text-red-500">Projects</span>
+                Autumn <span className="text-red-500">Projects</span>
                 </h3>
                 <p className="text-white/50 text-sm leading-relaxed mb-6 max-w-xs">
                 An indigenous engineering firm delivering civil, mechanical and
