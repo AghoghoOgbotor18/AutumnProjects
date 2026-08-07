@@ -87,7 +87,7 @@ const Projects = () => {
 
                 {/* Gallery grid */}
                 <div className="relative grid grid-cols-2 md:grid-cols-3 gap-4">
-                    <p className='absolute -top-6 text-xs text-white/50 animate-pulse flex items-center gap-1 -mb-5'>click images for better view <FaArrowDown /></p>
+                    <p className='absolute -top-6 text-sm text-white animate-pulse flex items-center gap-1 -mb-5'>click images for a better view <FaArrowDown /></p>
                     {projects.map((project, index) => (
                         <button
                         key={project.id}
