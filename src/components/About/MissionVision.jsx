@@ -17,7 +17,7 @@ const MissionVision = () => {
                     />
                     <img
                         src={Mission}
-                        alt="Adland Projects engineering team at work"
+                        alt="Autumn Projects engineering team at work"
                         className="relative w-full h-full object-cover rounded-md shadow-2xl z-10"
                     />
                     </div>
