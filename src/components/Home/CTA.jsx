@@ -4,7 +4,7 @@ const CTA = () => {
   return (
     <section className="relative h-[480px] md:h-[560px] flex items-center justify-center">
       <div
-        className="absolute inset-0 bg-cover bg-center pointer-events-none"
+        className="absolute inset-0 bg-cover md:bg-center bg-bottom pointer-events-none"
         style={{ backgroundImage: `url(/images/hero2.webp)`, backgroundAttachment: 'fixed' }}
       />
       <div className='absolute inset-0 bg-black/80' />
