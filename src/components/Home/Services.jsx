@@ -6,39 +6,9 @@ import infoTech from "../../assets/images/info-tech.jpg"
 import oilAndGas from "../../assets/images/oil-and-gas.jpg"
 import safety from "../../assets/images/quality.jpg"
 import { Link } from 'react-router-dom'
+import { FaArrowRight } from 'react-icons/fa'
+import services from '../../data/services'
 
-const services = [
-  {
-    slug: 'civil-structural-works',
-    title: 'Civil & Structural Works',
-    image: civilImage,
-  },
-  {
-    slug: 'mechanical-electrical-infrastructure',
-    title: 'Mechanical & Electrical Infrastructure',
-    image: mechanical,
-  },
-  {
-    slug: 'procurement-logistics',
-    title: 'Procurement & Logistics',
-    image: procurement,
-  },
-  {
-    slug: 'information-technology',
-    title: 'Information Technology Services',
-    image: infoTech,
-  },
-  {
-    slug: 'oil-gas-engineering',
-    title: 'Oil & Gas Engineering Support',
-    image: oilAndGas,
-  },
-  {
-    slug: 'safety-quality-assurance',
-    title: 'Safety & Quality Assurance',
-    image: safety
-  },
-];
 
 const Services = () => {
   return (
@@ -61,7 +31,7 @@ const Services = () => {
                 <Link
                 key={service.slug}
                 to={`/services/${service.slug}`}
-                className="group block overflow-hidden "
+                className="group block overflow-hidden bg-[#f1f1f1] p-3 shadow-md rounded-sm hover:shadow-lg"
                 >
                     {/* Image */}
                     <div className="relative h-56 overflow-hidden border-b-2 border-b-red-500 rounded-sm">
@@ -77,8 +47,12 @@ const Services = () => {
                         <h3 className="text-[#111315] text-lg md:text-xl font-semibold mb-3">
                             {service.title}
                         </h3>
-                        <span className="block h-[2px] w-10 bg-black/15 group-active:w-30 group-active:bg-red-500 group-hover:w-30 group-hover:bg-red-500 transition-all duration-300 ease-out" />
+                        <span className='inline-flex items-center gap-2 text-red-500 text-xs font-semibold'>
+                            Learn More {" "}
+                            <FaArrowRight className="w-2.5 h-2.5 transition-transform duration-300 group-hover:translate-x-1" />
+                        </span>
                     </div>
+                    <span className="block h-[2px] w-10 bg-black/15 group-active:w-30 group-active:bg-red-500 group-hover:w-30 group-hover:bg-red-500 transition-all duration-300 ease-out" />
                 </Link>
             ))}
             </div>
