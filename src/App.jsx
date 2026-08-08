@@ -8,11 +8,13 @@ import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import ServicesDetailsPage from './pages/ServicesDetailsPage'
 import ScrollToTop from './components/ScrollToTop'
+import IntroLoader from './components/IntroLoader'
 
 const App = () => {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <IntroLoader />
       <Routes>
         <Route path="/" element={<Layout/>}>
           <Route index element={<Home />} />
