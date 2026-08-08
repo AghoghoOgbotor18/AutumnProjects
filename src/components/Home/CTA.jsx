@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const CTA = () => {
   return (
@@ -16,12 +17,12 @@ const CTA = () => {
         <p className="text-white/80 text-base md:text-lg mb-8">
           Tell us what you need and our team will get back to you with a plan, a timeline, and a quote — no obligation.
         </p>
-        <a
-          href="/contact"
+        <Link
+          to="/contact"
           className="inline-flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white font-semibold px-8 py-3.5 rounded-md transition-colors duration-300"
         >
           Get a Free Quote
-        </a>
+        </Link>
       </div>
     </section>
   )
