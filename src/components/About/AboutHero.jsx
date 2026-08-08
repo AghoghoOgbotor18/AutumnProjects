@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const AboutHero = () => {
   return (
@@ -9,7 +10,7 @@ const AboutHero = () => {
       <div className="absolute inset-0 bg-black/70" />
       <div className="relative z-10 text-center px-6">
         <p className="text-white/60 text-sm mb-3">
-          <a href="/" className="hover:text-red-500 transition-colors duration-300">Home</a>
+          <Link to="/" className="hover:text-red-500 transition-colors duration-300">Home</Link>
           <span className="mx-2">/</span>
           <span className="text-red-500">About Us</span>
         </p>

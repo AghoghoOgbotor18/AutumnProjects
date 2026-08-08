@@ -1,15 +1,16 @@
 import React from 'react'
 import { FaArrowRight } from 'react-icons/fa'
 import services from '../../data/services';
+import { Link } from 'react-router-dom';
 
 const ServicesGrid = () => {
     return (
         <section className="bg-[#f1f1f1] py-20 px-6 md:px-16">
             <div className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 {services.map((service) => (
-                <a
+                <Link
                     key={service.slug}
-                    href={`/services/${service.slug}`}
+                    to={`/services/${service.slug}`}
                     className="group block rounded-md overflow-hidden bg-[#f1f1f1] border border-black/5 shadow-sm hover:shadow-lg transition-shadow duration-300 p-3"
                 >
                     <div className="relative h-52 overflow-hidden border-b-2 border-red-500 rounded-md">
@@ -32,7 +33,7 @@ const ServicesGrid = () => {
                             <FaArrowRight className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1" />
                         </span>
                     </div>
-                </a>
+                </Link>
                 ))}
             </div>
         </section>

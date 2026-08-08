@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaArrowRight } from 'react-icons/fa'
 import services from '../../data/services';
+import { Link } from 'react-router-dom';
 
 const RelatedServices = ({ currentSlug }) => {
   const related = services.filter((s) => s.slug !== currentSlug).slice(0, 3);
@@ -14,9 +15,9 @@ const RelatedServices = ({ currentSlug }) => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
                 {related.map((service) => (
-                    <a
+                    <Link
                     key={service.slug}
-                    href={`/services/${service.slug}`}
+                    to={`/services/${service.slug}`}
                     className="group block rounded-md overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300 p-2"
                     >
                         <div className="relative h-40 overflow-hidden border-b-2 border-red-500 rounded-md">
@@ -36,7 +37,7 @@ const RelatedServices = ({ currentSlug }) => {
                             </span>
                         </div>
                         <span className="block h-[2px] w-10 bg-black/15 group-active:w-30 group-active:bg-red-500 group-hover:w-30 group-hover:bg-red-500 transition-all duration-300 ease-out" />
-                    </a>
+                    </Link>
                 ))}
                 </div>
             </div>

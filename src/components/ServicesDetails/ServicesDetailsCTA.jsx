@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const ServicesDetailsCTA = () => {
     return (
@@ -7,12 +8,12 @@ const ServicesDetailsCTA = () => {
                 <h3 className="text-white text-2xl md:text-3xl font-bold">
                 Not sure which service fits? <span className="text-red-500">Let's talk it through.</span>
                 </h3>
-                <a
-                href="/contact"
+                <Link
+                to="/contact"
                 className="inline-flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white font-semibold px-8 py-3.5 rounded-md transition-colors duration-300 shrink-0"
                 >
                 Contact Us
-                </a>
+                </Link>
             </div>
         </section>
     )

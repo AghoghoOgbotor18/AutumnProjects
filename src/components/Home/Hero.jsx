@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 
 const Hero = () => {
     const [current, setCurrent] = useState(0);
@@ -83,18 +84,18 @@ const Hero = () => {
             key={`buttons-${current}`}
             className="flex flex-wrap gap-4 mt-4 animate-slideUpDelayed"
             >
-                <a
-                    href={slides[current].primaryBtn.href}
+                <Link
+                    to={slides[current].primaryBtn.href}
                     className="bg-red-600 hover:bg-red-500 text-white font-semibold px-6 py-3 rounded-md transition-colors duration-300"
                 >
                     {slides[current].primaryBtn.label}
-                </a>
-                <a 
-                    href={slides[current].secondaryBtn.href}
+                </Link>
+                <Link 
+                    to={slides[current].secondaryBtn.href}
                     className="border border-white text-white hover:bg-white hover:text-black font-semibold px-6 py-3 rounded-md transition-colors duration-300"
                 >
                     {slides[current].secondaryBtn.label}
-                </a>
+                </Link>
             </div>
         </div>
     </section>

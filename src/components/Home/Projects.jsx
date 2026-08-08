@@ -6,6 +6,7 @@ import procurement from "../../assets/images/procurement.jpg"
 import infoTech from "../../assets/images/info-tech.jpg"
 import oilAndGas from "../../assets/images/oil-and-gas.jpg"
 import safety from "../../assets/images/quality.jpg"
+import { Link } from 'react-router-dom'
 
 const projects = [
   { id: 1, title: 'SPDC Pipeline Integrity Works', image: '/images/hero1.webp' },
@@ -109,8 +110,8 @@ const Projects = () => {
 
                 {/* Bottom CTA, centered below the gallery */}
                 <div className="flex justify-center mt-12">
-                    <a
-                        href="/projects"
+                    <Link
+                        to="/projects"
                         className="group inline-flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white font-semibold px-8 py-3.5 rounded-md transition-colors duration-300"
                     >
                         View All Projects
@@ -118,7 +119,7 @@ const Projects = () => {
                             size={12}
                             className="transition-transform duration-300 group-hover:translate-x-1"
                         />
-                    </a>
+                    </Link>
                 </div>
             </div>
 

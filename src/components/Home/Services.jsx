@@ -5,6 +5,7 @@ import procurement from "../../assets/images/procurement.jpg"
 import infoTech from "../../assets/images/info-tech.jpg"
 import oilAndGas from "../../assets/images/oil-and-gas.jpg"
 import safety from "../../assets/images/quality.jpg"
+import { Link } from 'react-router-dom'
 
 const services = [
   {
@@ -57,9 +58,9 @@ const Services = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-                <a
+                <Link
                 key={service.slug}
-                href={`/services/${service.slug}`}
+                to={`/services/${service.slug}`}
                 className="group block overflow-hidden "
                 >
                     {/* Image */}
@@ -78,7 +79,7 @@ const Services = () => {
                         </h3>
                         <span className="block h-[2px] w-10 bg-black/15 group-active:w-30 group-active:bg-red-500 group-hover:w-30 group-hover:bg-red-500 transition-all duration-300 ease-out" />
                     </div>
-                </a>
+                </Link>
             ))}
             </div>
         </div>

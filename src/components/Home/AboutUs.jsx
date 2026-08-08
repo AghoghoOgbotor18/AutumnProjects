@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import aboutOne from "../../assets/work1.jpg";
 import aboutTwo from "../../assets/work2.jpg";
+import { Link } from 'react-router-dom';
 
 const useInView = () => {
     const ref = useRef(null);
@@ -109,8 +110,7 @@ const AboutUs = () => {
                 and Electrical Infrastructure firm in oil and gas.
             </p>
 
-            <a
-                href="/about"
+            <Link to="/about"
                 className="inline-flex items-center gap-2 bg-red-500 hover:bg-red-600 text-white font-semibold px-6 py-3 rounded-md transition-colors duration-300"
             >
                 Learn More About Us
@@ -123,7 +123,7 @@ const AboutUs = () => {
                 >
                 <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
-            </a>
+            </Link>
             </div>
         </div>
     </section>
