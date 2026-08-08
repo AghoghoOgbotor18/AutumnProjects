@@ -7,10 +7,12 @@ import Services from './pages/Services'
 import Projects from './pages/Projects'
 import Contact from './pages/Contact'
 import ServicesDetailsPage from './pages/ServicesDetailsPage'
+import ScrollToTop from './components/ScrollToTop'
 
 const App = () => {
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Layout/>}>
           <Route index element={<Home />} />

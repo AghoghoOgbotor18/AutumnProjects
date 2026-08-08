@@ -8,17 +8,14 @@ import StatsBar from '../components/About/StatsBar'
 
 const About = () => {
 
-    useEffect(() => {
-        scrollTo({top: 0, behavior: "smooth"})
-    })
     return (
         <div>
-        <AboutHero />
-        <OurStory />
-        <MissionVision />
-        <Values />
-        <StatsBar />
-        <AboutCTA />
+            <AboutHero />
+            <OurStory />
+            <MissionVision />
+            <Values />
+            <StatsBar />
+            <AboutCTA />
         </div>
     )
 }
