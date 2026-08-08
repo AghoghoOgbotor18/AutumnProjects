@@ -15,7 +15,7 @@ const logos = [
 
 const LogoScroll = () => {
   return (
-    <section className="bg-white py-16 px-6 md:px-16 overflow-hidden">
+    <section className="bg-[#f1f1f1] py-16 px-6 md:px-16 overflow-hidden">
         <div className="max-w-7xl mx-auto">
             <p className="text-center text-[#111315]/50 text-sm font-semibold tracking-[0.2em] uppercase mb-10">
             Trusted By

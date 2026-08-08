@@ -42,7 +42,7 @@ const services = [
 
 const Services = () => {
   return (
-    <section className="bg-[#e6e6e6] py-24 px-6 md:px-10">
+    <section className="bg-[#f1f1f1] py-24 px-6 md:px-10">
         <div className="max-w-7xl mx-auto">
             <div className="mb-14 flex flex-col gap-4 md:gap-6">
                 <span className="relative text-red-500 text-sm font-semibold tracking-[0.2em] uppercase before:absolute before:w-10 before:bg-red-500 before:-bottom-1 before:h-0.5">
