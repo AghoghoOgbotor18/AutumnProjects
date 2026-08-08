@@ -23,8 +23,8 @@ const LogoScroll = () => {
 
             <div className="relative w-full overflow-hidden">
                 {/* fade edges so logos don't hard-cut at the container bounds */}
-                <div className="pointer-events-none absolute left-0 top-0 h-full w-16 md:w-32 bg-linear-to-r from-white to-transparent z-10" />
-                <div className="pointer-events-none absolute right-0 top-0 h-full w-16 md:w-32 bg-linear-to-l from-white to-transparent z-10" />
+                <div className="pointer-events-none absolute left-0 top-0 h-full w-16 md:w-32 bg-linear-to-r from-[#f1f1f1] to-transparent z-10" />
+                <div className="pointer-events-none absolute right-0 top-0 h-full w-16 md:w-32 bg-linear-to-l from-[#f1f1f1] to-transparent z-10" />
 
                 <div className="group flex w-max">
                     <div className="flex items-center gap-16 md:gap-24 pr-16 md:pr-24 animate-marquee group-hover:[animation-play-state:paused]">
