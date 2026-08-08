@@ -11,8 +11,8 @@ const Contact = () => {
 
             <section className="bg-[#f1f1f1] py-20 px-6 md:px-16">
                 <div className="max-w-7xl mx-auto grid md:grid-cols-[1fr_1.4fr] gap-8 items-start">
-                <ContactInfoPanel />
-                <ContactForm />
+                    <ContactForm />
+                    <ContactInfoPanel />
                 </div>
             </section>
 
