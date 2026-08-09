@@ -8,9 +8,10 @@ import {
   FaPhoneAlt,
   FaEnvelope,
 } from 'react-icons/fa'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  const year = new Date().getFullYear();
+    const year = new Date().getFullYear();
 
     return (
         <footer className="bg-[#0B0C0E] border-t border-white/5 px-6 md:px-16 pt-20 pb-8">
@@ -54,12 +55,12 @@ const Footer = () => {
                     { label: 'Contact Us', href: '/contact' },
                 ].map((link) => (
                     <li key={link.label}>
-                    <a 
-                        href={link.href}
+                    <Link 
+                        to={link.href}
                         className="text-white/50 text-sm hover:text-red-500 transition-colors duration-300"
                     >
                         {link.label}
-                    </a>
+                    </Link>
                     </li>
                 ))}
                 </ul>

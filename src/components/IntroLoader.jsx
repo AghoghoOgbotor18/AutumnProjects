@@ -7,11 +7,11 @@ const IntroLoader = () => {
         document.body.style.overflow = 'hidden';
 
         const revealTimer = setTimeout(() => setStage('revealed'), 1600);
-        const openTimer = setTimeout(() => setStage('opening'), 3000);
+        const openTimer = setTimeout(() => setStage('opening'), 2000);
         const doneTimer = setTimeout(() => {
-        setStage('done');
-        document.body.style.overflow = '';
-        }, 3900);
+            setStage('done');
+            document.body.style.overflow = '';
+        }, 2500);
 
         return () => {
         clearTimeout(revealTimer);
@@ -26,7 +26,7 @@ const IntroLoader = () => {
     return (
         <div className="fixed inset-0 z-[999] pointer-events-none">
         <div
-            className={`absolute top-0 left-0 w-full h-1/2 bg-[#0B0C0E] flex items-end justify-center overflow-hidden transition-transform duration-[900ms] ease-in-out ${
+            className={`absolute top-0 left-0 w-full h-1/2 bg-[#0B0C0E] flex items-end justify-center overflow-hidden transition-transform duration-[800ms] ease-in-out ${
             stage === 'opening' ? '-translate-y-full' : 'translate-y-0'
             }`}
         >
@@ -42,7 +42,7 @@ const IntroLoader = () => {
         </div>
 
         <div
-            className={`absolute bottom-0 left-0 w-full h-1/2 bg-[#0B0C0E] flex items-start justify-center overflow-hidden transition-transform duration-[900ms] ease-in-out ${
+            className={`absolute bottom-0 left-0 w-full h-1/2 bg-[#0B0C0E] flex items-start justify-center overflow-hidden transition-transform duration-[600ms] ease-in-out ${
             stage === 'opening' ? 'translate-y-full' : 'translate-y-0'
             }`}
         >
@@ -57,7 +57,12 @@ const IntroLoader = () => {
             </span>
         </div>
 
-        <div className="absolute top-1/2 left-0 w-full h-[2px] bg-red-500/40 -translate-y-1/2 z-10" />
+        {/* the road red line */}
+        <div
+            className={`absolute top-1/2 left-0 w-full h-[2px] bg-red-500/40 -translate-y-1/2 z-10 transition-opacity duration-300 ease-out ${
+            stage === 'opening' ? 'opacity-0' : 'opacity-100'
+            }`}
+        />
 
         {/* Excavator — animation class stays mounted permanently; opacity is the only thing that toggles */}
         <div
@@ -69,7 +74,7 @@ const IntroLoader = () => {
         >
             <img
             src="/images/excavator.png"
-            alt=""
+            alt="excavator"
             className="w-full h-auto object-contain"
             />
         </div>
